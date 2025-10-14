@@ -1,6 +1,7 @@
 # we have to select the interpreter too by entering interpreter path as uv astral creates a virtual environment and we have to select that interpreter path -> venv/Scripts/python.exe
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware #CORS is Cross-Origin Resource Sharing
+from core.config import settings
 app = FastAPI(
     title="Choose Your Own Adventure API",
     description="An API for a choose your own adventure game.",
@@ -14,7 +15,8 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
+    # allow_origins=["*"],  # Allows all origins
+    allow_origins=settings.ALLOWED_ORIGINS
     allow_credentials=True,
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
