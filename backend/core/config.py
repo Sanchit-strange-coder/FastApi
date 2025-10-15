@@ -16,6 +16,8 @@ class Settings(BaseSettings):
         # we split the comma separated values and strip any extra spaces and return a list of origins
 
     class Config:
+
+        
         env_file = ".env"
         env_file_encoding = "utf-8"
         case_sensitive = True
