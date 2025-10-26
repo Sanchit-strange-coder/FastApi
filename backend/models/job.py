@@ -1,4 +1,4 @@
-# Job is going to make a intent to make a story generation task and store it in the database
+# Job is going to make an intent to make a story generation task and store it in the database
 # Like : inprogress or failed or completed
 # frontend -> ask if job is done
 # backend -> check job status and return the status to the frontend
